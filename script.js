@@ -8,10 +8,9 @@ $(".saveBtn").on("click", function(){
     var value = $(this).siblings(".description").val();
     var saveTime = $(this).parent().attr("id")
     //save to local storage
-    localStorage.setItem("storedValue", value, "savedTime", saveTime);
+    localStorage.setItem(saveTime, value);
     //get value from storage
-    localStorage.getItem("storedValue");
-    console.log(value, saveTime)
+    localStorage.getItem(saveTime)
 })
 
 
